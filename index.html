@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prescription Template | Clinical Excellence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --deep-blue: #1e3a8a;
+        --mist-blue: #e0f2fe;
+        --horizon-teal: #0d9488;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Manrope', sans-serif;
+        background-color: #f8fafc;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .serif-heading, .font-serif {
+        font-family: 'Cormorant Garamond', serif;
+      }
+
+      /* Enhanced Horizon Background */
+      .horizon-bg {
+        background: linear-gradient(180deg, #f0f9ff 0%, #e0f2fe 40%, #bae6fd 100%);
+        min-height: 100vh;
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* Organic Zen Orbs */
+      .orb {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(120px);
+        z-index: 0;
+        opacity: 0.4;
+        animation: pulse-slow 20s infinite alternate ease-in-out;
+      }
+
+      @keyframes pulse-slow {
+        0% { transform: scale(1) translate(0, 0); }
+        100% { transform: scale(1.3) translate(10%, 15%); }
+      }
+
+      /* Premium Glassmorphism */
+      .frosted-glass {
+        background: rgba(255, 255, 255, 0.45);
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(25px);
+        border: 1px solid rgba(255, 255, 255, 0.7);
+        box-shadow: 
+          0 10px 40px -10px rgba(30, 58, 138, 0.08),
+          0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+      }
+
+      .frosted-glass-hover:hover {
+        background: rgba(255, 255, 255, 0.6);
+        box-shadow: 0 20px 50px -15px rgba(30, 58, 138, 0.12);
+        transform: translateY(-4px);
+        transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar { width: 6px; }
+      ::-webkit-scrollbar-track { background: transparent; }
+      ::-webkit-scrollbar-thumb { background: rgba(30, 58, 138, 0.1); border-radius: 10px; }
+      ::-webkit-scrollbar-thumb:hover { background: rgba(30, 58, 138, 0.2); }
+
+      /* Premium Gradient Button Style */
+      .btn-premium {
+        background: linear-gradient(90deg, #3258ff 0%, #ba26ff 100%);
+        box-shadow: 0 10px 25px -5px rgba(186, 38, 255, 0.4);
+        transition: all 0.3s ease-out;
+      }
+      .btn-premium:hover {
+        filter: brightness(1.1);
+        box-shadow: 0 15px 30px -5px rgba(186, 38, 255, 0.5);
+        transform: translateY(-2px);
+      }
+
+      /* Clinical Alert Pulse */
+      .alert-pulse {
+        animation: soft-pulse 3s infinite;
+      }
+
+      @keyframes soft-pulse {
+        0%, 100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.1); }
+        50% { box-shadow: 0 0 20px 5px rgba(239, 68, 68, 0.05); }
+      }
+    </style>
+    <script type="importmap">
+    {
+      "imports": {
+        "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
+        "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+        "react/": "https://esm.sh/react@^19.2.3/",
+        "react": "https://esm.sh/react@^19.2.3",
+        "html2canvas": "https://esm.sh/html2canvas@1.4.1",
+        "jspdf": "https://esm.sh/jspdf@2.5.1"
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="./index.tsx"></script>
+  </body>
+</html>
